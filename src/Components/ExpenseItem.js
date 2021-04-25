@@ -2,10 +2,10 @@ import "./ExpenseItem.css";
 function ExpenseItem(props) {
   return (
     <div className="expense-item">
-      <div>25 March 2021</div>
+      <div>{props.date.toLocaleString()}</div>
       <div className="expense-item__description">
-        <h2>Car Insurance</h2>
-        <div className="expense-item__price">5000</div>
+        <h2>{props.title}</h2>
+        <div className="expense-item__price">${props.amount}</div>
       </div>
     </div>
   );
